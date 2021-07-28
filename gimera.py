@@ -172,6 +172,7 @@ def _get_config_file():
     return config_file
 
 def _store(main_repo, repo, value):
+    import pudb;pudb.set_trace()
     config_file = _get_config_file()
     config = yaml.load(config_file.read_text(), Loader=yaml.FullLoader)
     for repo in config['repos']:
